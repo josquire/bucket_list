@@ -1,0 +1,57 @@
+@import 'materialize';
+
+form {
+  margin: 50px;
+  width: 400px;
+  height: 100%;
+  background-color: #cfd8dc;
+  padding: 20px;
+  border: 2px solid black;
+  opacity: .8;
+}
+
+body {
+  background-image: url('steel-bucket.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection {
+  width: 400px;
+  background-color: #cfd8dc;
+  font-size: 100%;
+  opacity: .8;
+}
+
+.col-margin {
+  margin-left: 5%;
+}
+
+.completed-list {
+  text-decoration: line-through;
+}
+
+h1 {
+  text-shadow: 4px 4px 3px #b0bec5;
+}
+
+
+a {
+  color: #004d40;
+  text-shadow: 1px 1px 1px #90a4ae;
+  font-size: 120%;
+}
+
+a:hover {
+  color: #8c9eff;
+}
+
+.nav-wrapper {
+  background-color: #00695c;
+  padding: 0 15px;
+}
+
+.nav {
+  font-size: 200%;
+  color: #00695c;
+}

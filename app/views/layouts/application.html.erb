@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BucketList</title>
+    <%= csrf_meta_tags %>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo left">Bucket List</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "All Buckets", buckets_path %></a></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></a></li>
+
+      </ul>
+    </div>
+  </nav>
+    <%= yield %>
+  </body>
+</html>

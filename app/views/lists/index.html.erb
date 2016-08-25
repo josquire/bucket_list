@@ -1,0 +1,36 @@
+<div class='col-margin'>
+<h1><%= @bucket.name.capitalize %> List</h1>
+
+<% if @lists.any? %>
+
+  <ul>
+    <% @lists.each do |list| %>
+    <% if list.completed? %>
+      <li >
+        <h5>Completed!</h5>
+        <div class="completed-list collection">
+        <%= list.category %>
+        <h6> Location: <%= list.location %></h6>
+        <h6> Description: <%= list.description %></h6>
+        <div/>
+        <%= link_to 'Show', bucket_list_path(@bucket, list) %>
+      </li>
+    <% else %>
+      <h5>To Do: </h5>
+      <li class='not-completed collection'>
+        <%= list.category %>
+        <h6> Location: <%= list.location %></h6>
+        <h6> Description: <%= list.description %></h6>
+        <%= link_to 'Show', bucket_list_path(@bucket, list) %>
+      </li>
+     <% end %>
+   <% end %>
+ </ul>
+<% else %>
+<p>Your List is Empty, that's boring.</p>
+<% end %>
+
+<%= link_to 'Create List', new_bucket_list_path(@bucket) %> |
+
+<%= link_to 'Back to Bucket', bucket_path(@bucket) %>
+</div>

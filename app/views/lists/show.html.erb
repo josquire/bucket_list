@@ -1,0 +1,21 @@
+<h1><%= @bucket.name %> List</h1>
+
+<% if @list.present? %>
+
+   <ul class='collection'>
+     <li class='collection-item'>
+       <%= @list.category %>
+       <br />
+       <%= @list.location %>
+       <br />
+       <%= @list.description %>
+
+     </li>
+   </ul>
+<% else %>
+  <h3>Your List is Empty, thats boring.</h3>
+<% end %>
+
+<%= link_to 'Back to Bucket Lists', bucket_lists_path(@bucket) %> |
+<%= link_to 'Edit List', edit_bucket_list_path(@bucket, @list) %> |
+<%= link_to 'Delete List', bucket_list_path(@bucket, @list), method: :delete %>
